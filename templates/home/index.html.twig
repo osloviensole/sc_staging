@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+<style>
+    body{
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<div class="example-wrapper">
+    <h1>Hello {{ controller_name }}! ✅</h1>
+
+    <div>
+        <p>Connexion avec <a href="connect/google">google</a></p>
+        <p>Connexion avec <a href="connect/facebook">facebook</a></p>
+    </div>
+   
+</div>
+{% endblock %}
