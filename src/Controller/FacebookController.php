@@ -47,7 +47,7 @@ class FacebookController extends AbstractController
             /** @var \League\OAuth2\Client\Provider\FacebookUser $user */
             $user = $client->fetchUser();
 
-            // do something with all this new power!
+            // do something with all this new power kl!
             // e.g. $name = $user->getFirstName();
             var_dump($user); die;
             // ...
