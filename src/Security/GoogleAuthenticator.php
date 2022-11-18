@@ -54,19 +54,19 @@ use Symfony\Component\Security\Http\EntryPoint\AuthenticationEntryPointInterface
 
                  var_dump($googleUser);
 
-                 $email = $googleUser->getEmail();
+                 //$email = $googleUser->getEmail();
 
                  // 1) have they logged in with Google before? Easy!
-                 $existingUser = $this->entityManager->getRepository(User::class)->findOneBy(['googleId' => $googleUser->getId()]);
+                 //$existingUser = $this->entityManager->getRepository(User::class)->findOneBy(['googleId' => $googleUser->getId()]);
 
 
 
-                 if ($existingUser != null) {
-                     return $existingUser;
-                 }
+                 //if ($existingUser != null) {
+                  //   return $existingUser;
+                 //}
 
                  // 2) do we have a matching user by email?
-                 $user = $this->entityManager->getRepository(User::class)->findOneBy(['email' => $email]);
+                 //$user = $this->entityManager->getRepository(User::class)->findOneBy(['email' => $email]);
 
 
                  // 3) Maybe you just want to "register" them by creating a User object
@@ -78,7 +78,7 @@ use Symfony\Component\Security\Http\EntryPoint\AuthenticationEntryPointInterface
 //                 $this->entityManager->persist($user);
 //                 $this->entityManager->flush();
 
-                 return $user;
+                 return $googleUser;
              })
          );
      }
